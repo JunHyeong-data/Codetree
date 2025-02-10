@@ -1,26 +1,10 @@
-n= int(input())
-cnt1 = 1
-cnt2 = n
-for i in range(1,n+1):
-    if i % 2 != 0 :
-        for j in range (cnt1):
-            print('*', end=' ')
+n = int(input())
 
-        cnt1 += 1
-    else :
-        for j in range (cnt2):
+for i in range(2*n):
+    if i % 2 == 0:
+        for _ in range(1+i//2):
             print('*', end=' ')
-        cnt2 -= 1
-    print()
-cnt1 -= 1
-cnt2 += 1
-for i in range(1,n+1):
-    if i % 2 != 0 :
-        for j in range (cnt1):
+    else:
+        for _ in range(n-(i-1)//2):
             print('*', end=' ')
-        cnt1 -= 1
-    else :
-        for j in range (cnt2):
-            print('*', end=' ')
-        cnt2 += 1
     print()
