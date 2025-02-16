@@ -1,7 +1,8 @@
 n = int(input())
-cnt = 65
-for i in range(n):
-    for j in range(n):
-        print(chr(cnt), end='')
-        cnt += 1
+cnt = 'A'
+
+for _ in range(n):
+    for _ in range(n):
+        print(cnt, end='')
+        cnt = chr(ord(cnt)+1)
     print()
