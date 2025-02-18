@@ -1,10 +1,6 @@
 n = int(input())
 
 arr = list(map(int, input().split()))
-result = []
-for elem in arr[::-1]:
-    if elem % 2 == 0:
-        result.append(elem)
-
-for j in range(len(result)):
-    print(result[j], end=' ')
+for i in range(n-1, -1, -1):
+    if arr[i] % 2 == 0:
+        print(arr[i], end=' ')
