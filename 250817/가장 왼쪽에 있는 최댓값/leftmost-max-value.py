@@ -2,16 +2,17 @@ n = int(input())
 a = list(map(int, input().split()))
 
 # Please write your code here.
-prev_max_idx = n
+
 while True:
-    max_idx = 0
-    for i in range(1, prev_max_idx):
-        if a[i] > a[max_idx]:
-            max_idx = i
-    print(max_idx + 1, end=' ')
+    max = -1
+    loc = -1
 
-    if max_idx == 0:
+    for i in range(n):
+        if a[i] > max:
+            max = a[i]
+            loc = i
+    print(loc+1, end=' ')
+
+    if loc == 0:
         break
-
-    prev_max_idx = max_idx    
-
+    n = loc
