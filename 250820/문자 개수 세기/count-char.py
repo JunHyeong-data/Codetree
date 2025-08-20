@@ -1,6 +1,9 @@
 input_string = input()
 target = input()
 
-wewant = input_string.count(target)
+cnt = 0
+for elem in input_string:
+    if elem == target:
+        cnt += 1
 
-print(wewant)
+print(cnt)
