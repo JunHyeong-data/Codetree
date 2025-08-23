@@ -1,11 +1,9 @@
 s = list(input())
-
 leng = len(s)
-while True:
-    if leng == 1:
-        break
+
+while leng > 1:
     index = int(input())
-    if index > leng:
+    if index >= leng:   # >= 로 수정
         s.pop(-1)
     else:
         s.pop(index)
